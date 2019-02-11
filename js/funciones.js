@@ -17,9 +17,9 @@ $(document).ready(function(){
             if(yinicial<yfinal){
                 //alert("y subio");
                 $("#informacionC3").css("transform","rotate(0deg)");
-                $("#cancel").css("width","10.2%");
-                $("#cancel").css("left","95%");
-                $("#cancel").css("top","-5%");
+                $("#cancel").css("width","10%");
+                $("#cancel").css("left","93.5%");
+                $("#cancel").css("top","-3%");
                 }else{
                 //alert("y bajo");
                 $("#informacionC3").css("transform","rotate(180deg)");

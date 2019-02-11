@@ -18,9 +18,9 @@
 	 font-size: 1vw;
 }
 #cancel{
-    width: 2.1%;
-    position:fixed;
-    left: 21%;
-    top: 47.2%;
+    width: 8%;
+    position:absolute;
+    left: 85%;
+    top: 1%;
     transform: ;
 }
