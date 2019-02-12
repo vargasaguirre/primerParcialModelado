@@ -1,6 +1,6 @@
 /* Add to docs */
 #scrolling{/*frame*/
-    position:static;
+    position:fixed;
     /*top:58%;*/
     background:#5858FA;/*FF473D*/
     height:25%;
