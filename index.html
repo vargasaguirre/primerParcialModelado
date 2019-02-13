@@ -36,10 +36,10 @@
 		</div>
 		<div class="row cuadrante">
 			<!--CUADRANTE 3-->
-			<div class="col-sm-6" style="background-color: yellow;">
+			<div class="col-sm-6" style="background-color:white;">
 				<div class="row">
 					<!--INFORMACIÓN CELULAR-->
-					<div class="col-sm-6 seccion" style="background-color: black;">
+					<div class="col-sm-6 seccion" style="background-color: white;">
 						<div id="informacionC3">
                         <img src="img/cancel.png" id="cancel" alt="">
 						    <h5>Opcion jajajaja</h5>
@@ -49,36 +49,37 @@
 						</div>
 					</div>
 					<!--COMPARATIVA-->
-					<div class="col-sm-6" style="background-color: gray;">
-						comparativa
+					<div class="col-sm-6 compar" style="background-image: url('Imagenes/arrastre.png'); background-size: cover;"  id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						
+
 					</div>				
 				</div>
 				<div class="row">
 					<!--MENÚ CON ÍCONOS-->
-					<div class="col-sm-6 seccion" style="background-color: pink;">
-						iconos
+					<div class="col-sm-6 seccion" style="background-color: white; ">
+						<img src="imagenes/cel1.png" class="col-sm-6 cel1" style=" padding:2%; width:60px; height:75%; margin-top:13%;">
 					</div>
 					<!--SLIDER CELULALES-->
-					<div class="col-sm-6" style="background-color: brown;">
-						<div id="scrolling">
+					<div class="col-sm-6" style="background-color: white;">
+						<div id="scrolling" style="background-size: cover;">
 							<ul>
 								<li>
-									<img class="slide-image" src="img/Celulares/iphone.jpg" height="95"/>
+									<img class="slide-image" src="img/Celulares/iphone.jpg" height="95"  id="drag1" draggable="true" ondragstart="drag(event)"/>
 								</li>
 								<li>
-									<img class="slide-image" src="img/Celulares/galaxy8.jpg" width="90" height="95"/>
+									<img class="slide-image" src="img/Celulares/galaxy8.jpg" width="90" height="95" id="drag2" draggable="true" ondragstart="drag(event)"/>
 								</li>
 								<li>
-									<img class="slide-image" src="img/Celulares/moto.jpg" width="90" height="95"/>
+									<img class="slide-image" src="img/Celulares/moto.jpg" width="90" height="95" id="drag3" draggable="true" ondragstart="drag(event)"/>
 								</li>
 								<li>
-									<img class="slide-image" src="img/Celulares/hawei.jpg" width="110" height="100"/>
+									<img class="slide-image" src="img/Celulares/hawei.jpg" width="110" height="100" id="drag4" draggable="true" ondragstart="drag(event)"/>
 								</li>
 								<li>
-									<img class="slide-image" src="img/Celulares/sam8.jpg" width="50" height="90"/>
+									<img class="slide-image" src="img/Celulares/sam8.jpg" width="50" height="90" id="drag5" draggable="true" ondragstart="drag(event)"/>
 								</li>
 								<li>
-									<img class="slide-image" src="img/Celulares/prueba.jpg" width="120" height="110"/>
+									<img class="slide-image" src="img/Celulares/prueba.jpg" width="120" height="110" id="drag6" draggable="true" ondragstart="drag(event)"/>
 								</li>
 							</ul>
 						</div>
@@ -92,6 +93,7 @@
 	</div>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script src="js/funciones.js"></script>
+<script type="text/javascript" src="js/DragandDrop.js"></script>
 </body>
 </html>
 
