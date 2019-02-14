@@ -19,13 +19,9 @@ function allowDrop(ev)  {
     
 
     if(dato == 'drag1'){
-    document.getElementById('scrolling').style.display = "contents";
+    //document.getElementById('scrolling').style.display = "block";
     document.getElementById('div1').style.backgroundImage = "url('Imagenes/iphonecarac.jpg')";
-    document.getElementById('scrolling').style.backgroundImage = "url('Imagenes/volver.jpg')";
-    
-
-
-    
+    //document.getElementById('scrolling').style.backgroundImage = "url('Imagenes/volver.jpg')";
   }
     
     if(dato == 'drag2'){
