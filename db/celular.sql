@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-02-2019 a las 19:22:43
+-- Tiempo de generación: 15-02-2019 a las 18:47:12
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 7.2.5
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `MesaInteractiva`
+-- Base de datos: `mesainteractiva`
 --
 
 -- --------------------------------------------------------
@@ -38,8 +38,16 @@ CREATE TABLE `celular` (
   `Memoria_Ram` varchar(100) NOT NULL,
   `Almacenamiento` int(11) NOT NULL,
   `SistemaOperativo` varchar(100) NOT NULL,
-  `Extras` varchar(150) NOT NULL
+  `Extras` varchar(150) NOT NULL,
+  `rutaImagen` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `celular`
+--
+
+INSERT INTO `celular` (`idCelular`, `Marca`, `Modelo`, `Precio`, `Descripcion`, `Camara`, `Memoria_Ram`, `Almacenamiento`, `SistemaOperativo`, `Extras`, `rutaImagen`) VALUES
+(0, 'Motorola', 'x2L', 6000, 'Este es el modelo de las alta gama en el mercado', '5mpx', '1GB', 8, 'Adroid 7', 'Cuenta con manos libres', '/img/imagen1.jpg');
 
 --
 -- Índices para tablas volcadas
