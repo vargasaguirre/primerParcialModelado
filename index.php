@@ -3,6 +3,7 @@
 <head>
 	<title></title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!--SLIDER-->
@@ -83,6 +84,56 @@
 			</div>
 		</div>
 	</div>
+	<div id="salvapantallas">
+        <p class="textoes uno">Desliza la pantalla</p>
+	    <p class="textoes dos">Desliza la pantalla</p>
+	    <div class="slider">
+	<div class="slide-track">
+		<div class="slide">
+			<img class="imagenes"  src="img/spantalla/ix.jpg"  alt="" />
+		</div>
+		<div class="slide">
+			<img class="imagenes"  src="img/spantalla/weex2.png"  />
+		</div>
+		<div class="slide">
+			<img class="imagenes"  class="imagenes"  src="img/spantalla/p20.jpg"  alt="" />
+		</div>
+		<div class="slide">
+			<img class="imagenes"  src="img/spantalla/virgin.jpg"  alt="" />
+		</div>
+		<div class="slide">
+			<img class="imagenes"  src="img/spantalla/xi2.jpeg"  alt="" />
+		</div>
+		<div class="slide">
+			<img class="imagenes"  src="img/spantalla/Pok%C3%A9mon-GO-10-09-15-000.jpg"  alt="" />
+		</div>
+		<div class="slide">
+			<img class="imagenes"  src="img/spantalla/motog7.png" alt="" />
+		</div>
+		<div class="slide">
+			<img class="imagenes"  src="img/spantalla/ix.jpg"  alt="" />
+		</div>
+		<div class="slide">
+			<img class="imagenes"  src="img/spantalla/weex2.png"  />
+		</div>
+		<div class="slide">
+			<img class="imagenes"  src="img/spantalla/p20.jpg"  alt="" />
+		</div>
+		<div class="slide">
+			<img class="imagenes"  src="img/spantalla/virgin.jpg"  alt="" />
+		</div>
+		<div class="slide">
+			<img class="imagenes"  src="img/spantalla/xi2.jpeg"  alt="" />
+		</div>
+		<div class="slide">
+			<img class="imagenes"  src="img/spantalla/Pok%C3%A9mon-GO-10-09-15-000.jpg"  alt="" />
+		</div>
+		<div class="slide">
+			<img class="imagenes"  src="img/spantalla/motog7.png"  alt="" />
+		</div>
+	</div>
+</div>
+    </div>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script src="js/funciones.js"></script>
 <script type="text/javascript" src="js/DragandDrop.js"></script>
