@@ -17,9 +17,23 @@ function allowDrop(ev)  {
      ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     
-alert(dato);
-    if(dato == 0){
-    document.getElementById('div1').style.backgroundImage = "url('Imagenes/iphonecarac.jpg')";
-  }
+    //alert(dato);
+    if(dato >= 0){
+      
+      $.ajax({
+        type: 'POST',
+        url:  'php/consultaBD.php',
+        data: {
+          clave: dato,
+        },
+        success: function(data) {
+          document.getElementById('div1').style.backgroundImage = "url('Imagenes/iphonecarac2.jpg')";
+          $("#div1").html(data);
+        },
+        error: function() {
+          $("#div1").html("Error");
+        }
+      });
+    }
   }
      

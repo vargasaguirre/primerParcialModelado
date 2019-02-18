@@ -15,6 +15,7 @@
     transition: width 0.5s, height 0.5s;
 }
 .btnIconos:hover {
+    font-size: 28px;
     width: 60px;
     height: 60px;
 }
@@ -35,6 +36,13 @@
      text-shadow: 2px 2px 1px grey;
      /*color: white;
      text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;*/
+}
+#div1{
+    padding: auto;
+     font-size: 1vw;
+     font-family: verdana;
+     text-align: center;
+     text-shadow: 1px 1px 1px grey;
 }
 #cancel{
     width: 8%;
