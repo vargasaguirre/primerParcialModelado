@@ -1,32 +1,18 @@
 .cuadrante {
-	height: 25.4vw;
-    width: 101%;
+	height: 20em;
 }
 .seccion {
 	height: 10em;
 }
 
 .btnIconos{
-    margin-left: %;
-    margin-top: -20%;
-    font-size: 1em;
+    font-size: 23px;
     border-radius: 50%;
-    width: 13%;
-    height: 25%;
-    box-shadow: 3px 3px 2px grey;/*
-    
+    width: 50px;
+    height: 50px;
+    box-shadow: 3px 3px 2px grey;
     -webkit-transition: width 0.5s, height 0.5s; /* For Safari 3.1 to 6.0 */
-   /* transition: width 0.5s, height 0.5s;*/
-    display:inline-block;
-}
-
-#bextras{
-    margin-left:3%;
-    margin-top: -30%;
-}
-#bsistema{
-   margin-left: 55%;
-    margin-top: -30%;
+    transition: width 0.5s, height 0.5s;
 }
 .btnIconos:hover {
     font-size: 28px;
@@ -36,33 +22,29 @@
 
 .informacionC3{
   transform: ;
-    color: white;
-    
     -webkit-user-select: none;
-    background-color: rgba(3, 97, 247, 0.12);
-    border-color: rgba(255, 255, 255, 0.87);
-    border-width: 2px;
+    background-color: rgba(216, 205, 221, 0.93);
+    border-color: rgba(175, 19, 19, 0.68);
     border-style: solid;
     margin: 0 auto;
     margin-top: 1%;
    width: 90%;
     height: 97%;
-	 font-size: 2vw;
+	 font-size: 3vw;
+     font-family: verdana;
+     text-align: center;
+     text-shadow: 2px 2px 1px grey;
+     /*color: white;
+     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;*/
 }
-#info32{
-    
-}
-#info31{
-    
-}
-/*#div1{
+#div1{
     padding: auto;
      font-size: 1vw;
      font-family: verdana;
      text-align: center;
      text-shadow: 1px 1px 1px grey;
-}*/
-.cancel{
+}
+#cancel{
     width: 8%;
     position:absolute;
     left: 85%;
@@ -72,7 +54,7 @@
 
 html,body{
     
-    
+    color: black;
     height: 98.8%;
     width: 100%;
     margin: 0px;
@@ -152,6 +134,8 @@ html,body{
     width: 100%;
 }
 #salvapantallas{
+
+    
     position: absolute;
     top: 0px;
     background-color: rgba(0, 0, 0, 0.96);
@@ -171,27 +155,4 @@ html,body{
     color:white;
     text-align: center;
   margin-top: 35%;
-}
-#imagen1{
-    margin-top: 3%;
-    width: 50%;
-    height: 90%;
-}
-#cuadrante3{
-    border-color: rgba(77, 111, 224, 0.06);
-    border-style: solid;
-    border-width: 1px;
-    background-color: rgba(0, 0, 0, 0.93);
-}
-#cuadrante1{
-    
-    background-color: rgba(0, 0, 0, 0.93);
-    transform: rotate(180deg);
-}
-#cuadrante2{
-    background-color: rgba(0, 0, 0, 0.93);
-    transform: rotate(180deg);
-}
-#cuadrante4{
-    background-color: rgba(0, 0, 0, 0.93);
 }

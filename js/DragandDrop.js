@@ -17,12 +17,7 @@ function allowDrop(ev)  {
      ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     
- //alert(dato);
-        $("#aid").empty();
-        var txt1="<input id='n' value="+dato+">";
-        $("#aid").append(txt1);
- 
-    
+    //alert(dato);
     if(dato >= 0){
       
       $.ajax({
@@ -32,10 +27,10 @@ function allowDrop(ev)  {
           clave: dato,
         },
         success: function(data) {
-          //document.getElementById('div1').style.backgroundImage = "url('Imagenes/iphonecarac2.jpg')";
-            
-        //  $("#InfoCel2").html(data);
-          // alert(data);
+          document.getElementById('div1').style.backgroundImage = "url('Imagenes/iphonecarac2.jpg')";
+             var oj= JSON.parse(data);
+                //alert(oj.idCelular);
+               document.getElementById("InfoCelCompar").setAttribute("class",oj.idCelular);
         },
         error: function() {
           $("#div1").html("Error");

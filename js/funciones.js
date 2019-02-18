@@ -1,5 +1,37 @@
-function getInfo(info) {
+function getInfo(info,infocompar) {
   document.getElementById("InfoCel").innerHTML = info;
+  var peka = document.getElementById("InfoCelCompar").getAttribute("class");
+  var response = consultaBD(peka,infocompar);
+  
+  //document.getElementById("InfoCelCompar").innerHTML=infocompar;
+}
+function consultaBD(dato,indice) {
+    $.ajax({
+        type: 'POST',
+        url:  'php/consultaBD.php',
+        data: {
+          clave: dato,
+        },
+        success: function(data) {
+          document.getElementById('div1').style.backgroundImage = "url('Imagenes/iphonecarac2.jpg')";
+             var oj= JSON.parse(data);
+             if (indice==1) {
+                 document.getElementById("InfoCelCompar").innerHTML = oj.Camara;
+             }else if (indice==2) {
+                document.getElementById("InfoCelCompar").innerHTML = oj.Memoria_Ram;
+             }else if (indice==3) {
+                document.getElementById("InfoCelCompar").innerHTML = oj.Descripcion;
+             }else if (indice==4){
+                document.getElementById("InfoCelCompar").innerHTML = oj.SistemaOperativo;
+             }else if (indice==5){
+                document.getElementById("InfoCelCompar").innerHTML = oj.Extras;
+             }
+            
+        },
+        error: function() {
+          $("#div1").html("Error");
+        }
+      });
 }
 $(document).ready(function(){
     rotarInfo();
@@ -10,60 +42,40 @@ $(document).ready(function(){
             salvaPantalla();
     
   });
- 
+
     
     function rotarInfo(){
-        var jo;
-      
         var xfinal,yfinal,xinicial,yinicial;
         $(".informacionC3").mousedown(function(event){
             xinicial = event.pageX;
             yinicial = event.pageY;
-            jo=$(this).attr("id");
     });
         
         $(".informacionC3").mouseup(function(event){
             xfinal=event.pageX;
             yfinal=event.pageY;
-            if(jo == "info32"){
-                if(yinicial<yfinal){
-                //alert("y subio");
-                $("#info32").css("transform","rotate(0deg)");
-                $(".cancel").css("width","10.2%");
-                $(".cancel").css("left","95%");
-                $(".cancel").css("top","-5%");
-                }else{
-                //alert("y bajo");
-                $("#info32").css("transform","rotate(180deg)");
-                    $(".cancel").css("transform","rotate(180deg)");
-                    $(".cancel").css("width","10.2%");
-                $(".cancel").css("left","95%");
-                $(".cancel").css("top","-5%");
-                }
-            }else{
-                if(yinicial<yfinal){
-                //alert("y subio");
-                $("#info31").css("transform","rotate(0deg)");
-                $(".cancel").css("width","10.2%");
-                $(".cancel").css("left","95%");
-                $(".cancel").css("top","-5%");
-                }else{
-                //alert("y bajo");
-                $("#info31").css("transform","rotate(180deg)");
-                    $(".cancel").css("transform","rotate(180deg)");
-                    $(".cancel").css("width","10.2%");
-                $(".cancel").css("left","95%");
-                $(".cancel").css("top","-5%");
-                }
-            }
             
+            if(yinicial<yfinal){
+                //alert("y subio");
+                $(".informacionC3").css("transform","rotate(0deg)");
+                $("#cancel").css("width","10.2%");
+                $("#cancel").css("left","95%");
+                $("#cancel").css("top","-5%");
+                }else{
+                //alert("y bajo");
+                $(".informacionC3").css("transform","rotate(180deg)");
+                    $("#cancel").css("transform","rotate(180deg)");
+                    $("#cancel").css("width","10.2%");
+                $("#cancel").css("left","95%");
+                $("#cancel").css("top","-5%");
+                }
                  });
        }
      
     function Bcancelar(){
-        $(".cancel").click(function(){
-             $(".informacionC3").hide();
-            $(".cancel").hide();
+        $("#cancel").click(function(){
+             $("#informacionC3").hide();
+            $("#cancel").hide();
         })
     }
     //funcion para obtener coordenadas 
