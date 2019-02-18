@@ -6,8 +6,17 @@
 }
 
 .btnIconos{
-    font-size: 40px;
+    font-size: 23px;
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 3px 3px 2px grey;
+    -webkit-transition: width 0.5s, height 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.5s, height 0.5s;
+}
+.btnIconos:hover {
+    width: 60px;
+    height: 60px;
 }
 
 #informacionC3{
@@ -20,7 +29,12 @@
     margin-top: 1%;
    width: 90%;
     height: 97%;
-	 font-size: 1vw;
+	 font-size: 3vw;
+     font-family: verdana;
+     text-align: center;
+     text-shadow: 2px 2px 1px grey;
+     /*color: white;
+     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;*/
 }
 #cancel{
     width: 8%;

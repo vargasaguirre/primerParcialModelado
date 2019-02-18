@@ -56,9 +56,9 @@
                         ?>
 						<img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>" class="col-sm-6 cel1" style=" padding:2%; width:60px; height:75%; margin-top:13%;">
 						<button type="button" class="btn btn-primary btnIconos" onclick="getInfo('<?php echo $celular->Camara; ?>');"><i class="fa fa-camera"></i></button>
-						<button type="button" class="btn btn-success btnIconos" onclick="getInfo('<?php echo $celular->Memoria_Ram; ?>');"><i class="material-icons">memory</i></button>
+						<button type="button" class="btn btn-success btnIconos" onclick="getInfo('<?php echo $celular->Memoria_Ram; ?>');" style="font-size: 25px;"><i class="material-icons">memory</i></button>
 						<button type="button" class="btn btn-warning btnIconos" onclick="getInfo('<?php echo $celular->Descripcion; ?>');"><i class='fas fa-mobile-alt'></i></button>
-						<button type="button" class="btn btn-danger btnIconos" onclick="getInfo('<?php echo $celular->SistemaOperativo; ?>');"><i class="fa fa-android"></i>/<i class="fa fa-apple"></i></button>
+						<button type="button" class="btn btn-danger btnIconos" onclick="getInfo('<?php echo $celular->SistemaOperativo; ?>');" style="font-size: 15px;"><i class="fa fa-android"></i>/<i class="fa fa-apple"></i></button>
 						<button type="button" class="btn btn-dark btnIconos" onclick="getInfo('<?php echo $celular->Extras; ?>');"><i class="fa fa-plus"></i></button>
 
 					</div>
