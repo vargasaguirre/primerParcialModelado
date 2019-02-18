@@ -5,6 +5,11 @@
 	height: 10em;
 }
 
+.btnIconos{
+    font-size: 40px;
+    border-radius: 50%;
+}
+
 #informacionC3{
   transform: ;
     -webkit-user-select: none;

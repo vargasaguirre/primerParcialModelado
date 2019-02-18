@@ -11,6 +11,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
     <script src="js/itemslide.js"></script>
     <script src="js/sliding.js"></script>
+    <!--ÍCONOS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <meta charset="utf-8">
 </head>
 <body>
@@ -50,14 +54,18 @@
 					</div>
 					<!--COMPARATIVA-->
 					<div class="col-sm-6 compar" style="background-image: url('Imagenes/arrastre.png'); background-size: cover;"  id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-						
-
 					</div>				
 				</div>
 				<div class="row">
 					<!--MENÚ CON ÍCONOS-->
 					<div class="col-sm-6 seccion" style="background-color: white; ">
 						<img src="imagenes/cel1.png" class="col-sm-6 cel1" style=" padding:2%; width:60px; height:75%; margin-top:13%;">
+						<button type="button" class="btn btn-primary btnIconos"><i class="fa fa-camera"></i></button>
+						<button type="button" class="btn btn-success btnIconos"><i class="material-icons">memory</i></button>
+						<button type="button" class="btn btn-warning btnIconos"><i class='fas fa-mobile-alt'></i></button>
+						<button type="button" class="btn btn-danger btnIconos"><i class="fa fa-android"></i>/<i class="fa fa-apple"></i></button>
+						<button type="button" class="btn btn-dark btnIconos"><i class="fa fa-plus"></i></button>
+
 					</div>
 					<!--SLIDER CELULALES-->
 					<div class="col-sm-6" style="background-color: white;">
