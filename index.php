@@ -15,20 +15,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <?php include 'php/consultaBD.php'; ?>
 <meta charset="utf-8">
 </head>
-<body>
-	<!--<div class="container" style="text-align: center;"><br><br>
-		<div class="row">
-			<div class="col-sm-2"></div>
-			<div class="col-sm-4">
-				 <h1>Diseño Mesa interactiva</h1>
-			</div>
-			<div class="col-sm-4"></div><h1><h1>
-		</div>		
-	</div>-->
-	<!--<h1>HOla</h1>-->
-    
+<body>    
 	<div>
 		<div class="row cuadrante">
 			<div class="col-sm-6" style="background-color: blue;">
@@ -71,24 +61,18 @@
 					<div class="col-sm-6" style="background-color: white;">
 						<div id="scrolling" style="background-size: cover;">
 							<ul>
-								<li>
-									<img class="slide-image" src="img/Celulares/iphone.jpg" height="95"  id="drag1" draggable="true" ondragstart="drag(event)"/>
+                            <?php
+                                    $Consulta = new  consultaBD;
+                                    $usuarios = $Consulta->consultaCelulares();
+                                    $N_U = count($usuarios,0);
+                                 for ($i=0; $i<$N_U;$i++){
+                                      $ruta=$usuarios[$i]->rutaImagen;
+                                      $id=$usuarios[$i]->idCelular;
+                                ?>
+								 <li>
+									<img id="<?php echo $id ;?>" class="slide-image" src="<?php echo 'BDCelulares/'.$ruta; ?>" height="95"  id="drag1" draggable="true" ondragstart="drag(event)"/>
 								</li>
-								<li>
-									<img class="slide-image" src="img/Celulares/galaxy8.jpg" width="90" height="95" id="drag2" draggable="true" ondragstart="drag(event)"/>
-								</li>
-								<li>
-									<img class="slide-image" src="img/Celulares/moto.jpg" width="90" height="95" id="drag3" draggable="true" ondragstart="drag(event)"/>
-								</li>
-								<li>
-									<img class="slide-image" src="img/Celulares/hawei.jpg" width="110" height="100" id="drag4" draggable="true" ondragstart="drag(event)"/>
-								</li>
-								<li>
-									<img class="slide-image" src="img/Celulares/sam8.jpg" width="50" height="90" id="drag5" draggable="true" ondragstart="drag(event)"/>
-								</li>
-								<li>
-									<img class="slide-image" src="img/Celulares/prueba.jpg" width="120" height="110" id="drag6" draggable="true" ondragstart="drag(event)"/>
-								</li>
+                                <?php }?>
 							</ul>
 						</div>
 					</div>				

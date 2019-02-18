@@ -17,14 +17,9 @@ function allowDrop(ev)  {
      ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     
-
-    if(dato == 'drag1'){
-    //document.getElementById('scrolling').style.display = "block";
+alert(dato);
+    if(dato == 0){
     document.getElementById('div1').style.backgroundImage = "url('Imagenes/iphonecarac.jpg')";
-    //document.getElementById('scrolling').style.backgroundImage = "url('Imagenes/volver.jpg')";
   }
-    
-    if(dato == 'drag2'){
-      document.getElementById('div1').style.background='black';}
   }
      

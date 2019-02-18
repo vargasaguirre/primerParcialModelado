@@ -22,9 +22,14 @@
 				return $consulta=null;
 			}
 		}
+        public function consultaCelulares(){
+            
+			$query="SELECT * FROM celular";
+			$usuario= $this->ObjetBD->prepare($query);
+			 $usuario->execute();
+             $users=$usuario->fetchAll(PDO::FETCH_OBJ);
+            return $users;
+        }
 		
-    }
-    $Consulta = new  consultaBD;
-	var_dump($Consulta->consultaCelular(1));
- 
+    } 
 ?>

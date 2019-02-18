@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-02-2019 a las 18:47:12
--- Versión del servidor: 10.1.32-MariaDB
--- Versión de PHP: 7.2.5
+-- Tiempo de generación: 18-02-2019 a las 00:29:28
+-- Versión del servidor: 10.1.28-MariaDB
+-- Versión de PHP: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -47,7 +47,14 @@ CREATE TABLE `celular` (
 --
 
 INSERT INTO `celular` (`idCelular`, `Marca`, `Modelo`, `Precio`, `Descripcion`, `Camara`, `Memoria_Ram`, `Almacenamiento`, `SistemaOperativo`, `Extras`, `rutaImagen`) VALUES
-(0, 'Motorola', 'x2L', 6000, 'Este es el modelo de las alta gama en el mercado', '5mpx', '1GB', 8, 'Adroid 7', 'Cuenta con manos libres', '/img/imagen1.jpg');
+(0, 'Motorola', 'Moto E4', 2500, 'Pantalla 5 Pulgadas\r\nColor Negro\r\n', '8 Mpx', '2GB', 316, 'Android', 'Lector de huellas\r\nAudifonos', 'motoroloa.jpg'),
+(1, 'Apple', 'iphone8(T4)', 17000, 'Color oro,plata,gris especial', '12 MP', '256 GB', 64, 'iOS', 'Chip A11 Bionic\r\nsensor de huellas digitales ', 'iphone.jpg'),
+(2, 'Huawei', 'Huawei Y7', 40000, 'Pantalla 5,99 pulgadas\r\nProcesador octa-core 1.4 GHZ', '13 MP', '2 GB', 16, 'Android', 'Lector de huellas\r\ncamara frontal 8 MP', 'huawei.jpg'),
+(3, 'LG', 'LG G7', 3500, 'Pantalla IPS 6 pulgadas\r\nProcesador Snapdragon 845\r\n', '8 MP', '4 GB', 64, 'Android', 'Sensor de huellas\r\nSonido Boombox\r\n', 'lg.jpg'),
+(4, 'Samsung ', 'Galaxy S9', 11499, 'Pantalla 5.8 pulgadas', '12 MP', '4GB', 64, 'Android Oreo', 'Camara frontal 8MP', 'sam.jpg'),
+(5, 'Huawei', 'Huawei P20', 7000, 'Pantalla 5,84 pulgadas\r\nProcesador Huawei Kirin 970', '20 MPX', '4 GB', 128, 'Android Oreo 8.1', 'Camara frontal 24 MPX', 'And.jpg'),
+(6, 'Motorola', 'One', 6700, 'Pantalla HD 5.86', '12 MPX', '4 GB', 64, 'Android', 'Lector de huellas \r\nAudifonos ', 'motoOne.jpg'),
+(7, 'Apple', 'iPhone XS', 28000, 'OLED 5,8 pulga', '12+12 MPX', '4GB', 64, 'iOS12', 'Face ID\r\nResistencia al agua\r\n3D Touch\r\n', 'xs.jpg');
 
 --
 -- Índices para tablas volcadas
