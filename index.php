@@ -37,9 +37,8 @@
 					<div class="col-sm-6 seccion" style="background-color: white;">
 						<div id="informacionC3">
                         <img src="img/cancel.png" id="cancel" alt="">
-						    <h5>Opcion jajajaja</h5>
-						    <p>Informacion de dispositivo:
-						    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat et quisquam iusto molestiae impedit error, cumque, reiciendis. Error quo ad sequi, velit, commodi in, iste qui mollitia recusandae asperiores obcaecati?
+						    <h5>Informacion del dispositivo</h5>
+						    <p id="InfoCel">
 						    </p>
 						</div>
 					</div>
@@ -50,12 +49,17 @@
 				<div class="row">
 					<!--MENÚ CON ÍCONOS-->
 					<div class="col-sm-6 seccion" style="background-color: white; ">
-						<img src="imagenes/cel1.png" class="col-sm-6 cel1" style=" padding:2%; width:60px; height:75%; margin-top:13%;">
-						<button type="button" class="btn btn-primary btnIconos"><i class="fa fa-camera"></i></button>
-						<button type="button" class="btn btn-success btnIconos"><i class="material-icons">memory</i></button>
-						<button type="button" class="btn btn-warning btnIconos"><i class='fas fa-mobile-alt'></i></button>
-						<button type="button" class="btn btn-danger btnIconos"><i class="fa fa-android"></i>/<i class="fa fa-apple"></i></button>
-						<button type="button" class="btn btn-dark btnIconos"><i class="fa fa-plus"></i></button>
+                        <?php 
+                            $Consulta = new  consultaBD;
+                            $celular = $Consulta->consultaCelular(0);
+                            $rutaexibido= $celular->rutaImagen;
+                        ?>
+						<img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>" class="col-sm-6 cel1" style=" padding:2%; width:60px; height:75%; margin-top:13%;">
+						<button type="button" class="btn btn-primary btnIconos" onclick="getInfo('<?php echo $celular->Camara; ?>');"><i class="fa fa-camera"></i></button>
+						<button type="button" class="btn btn-success btnIconos" onclick="getInfo('<?php echo $celular->Memoria_Ram; ?>');"><i class="material-icons">memory</i></button>
+						<button type="button" class="btn btn-warning btnIconos" onclick="getInfo('<?php echo $celular->Descripcion; ?>');"><i class='fas fa-mobile-alt'></i></button>
+						<button type="button" class="btn btn-danger btnIconos" onclick="getInfo('<?php echo $celular->SistemaOperativo; ?>');"><i class="fa fa-android"></i>/<i class="fa fa-apple"></i></button>
+						<button type="button" class="btn btn-dark btnIconos" onclick="getInfo('<?php echo $celular->Extras; ?>');"><i class="fa fa-plus"></i></button>
 
 					</div>
 					<!--SLIDER CELULALES-->

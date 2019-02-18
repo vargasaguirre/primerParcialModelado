@@ -1,3 +1,6 @@
+function getInfo(info) {
+  document.getElementById("InfoCel").innerHTML = info;
+}
 $(document).ready(function(){
     rotarInfo();
     Bcancelar();
