@@ -17,7 +17,12 @@ function allowDrop(ev)  {
      ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     
-    //alert(dato);
+ //alert(dato);
+        $("#aid").empty();
+        var txt1="<input id='n' value="+dato+">";
+        $("#aid").append(txt1);
+ 
+    
     if(dato >= 0){
       
       $.ajax({
@@ -27,8 +32,10 @@ function allowDrop(ev)  {
           clave: dato,
         },
         success: function(data) {
-          document.getElementById('div1').style.backgroundImage = "url('Imagenes/iphonecarac2.jpg')";
-          $("#div1").html(data);
+          //document.getElementById('div1').style.backgroundImage = "url('Imagenes/iphonecarac2.jpg')";
+            
+        //  $("#InfoCel2").html(data);
+          // alert(data);
         },
         error: function() {
           $("#div1").html("Error");

@@ -10,40 +10,60 @@ $(document).ready(function(){
             salvaPantalla();
     
   });
-
+ 
     
     function rotarInfo(){
+        var jo;
+      
         var xfinal,yfinal,xinicial,yinicial;
-        $("#informacionC3").mousedown(function(event){
+        $(".informacionC3").mousedown(function(event){
             xinicial = event.pageX;
             yinicial = event.pageY;
+            jo=$(this).attr("id");
     });
         
-        $("#informacionC3").mouseup(function(event){
+        $(".informacionC3").mouseup(function(event){
             xfinal=event.pageX;
             yfinal=event.pageY;
-            
-            if(yinicial<yfinal){
+            if(jo == "info32"){
+                if(yinicial<yfinal){
                 //alert("y subio");
-                $("#informacionC3").css("transform","rotate(0deg)");
-                $("#cancel").css("width","10.2%");
-                $("#cancel").css("left","95%");
-                $("#cancel").css("top","-5%");
+                $("#info32").css("transform","rotate(0deg)");
+                $(".cancel").css("width","10.2%");
+                $(".cancel").css("left","95%");
+                $(".cancel").css("top","-5%");
                 }else{
                 //alert("y bajo");
-                $("#informacionC3").css("transform","rotate(180deg)");
-                    $("#cancel").css("transform","rotate(180deg)");
-                    $("#cancel").css("width","10.2%");
-                $("#cancel").css("left","95%");
-                $("#cancel").css("top","-5%");
+                $("#info32").css("transform","rotate(180deg)");
+                    $(".cancel").css("transform","rotate(180deg)");
+                    $(".cancel").css("width","10.2%");
+                $(".cancel").css("left","95%");
+                $(".cancel").css("top","-5%");
                 }
+            }else{
+                if(yinicial<yfinal){
+                //alert("y subio");
+                $("#info31").css("transform","rotate(0deg)");
+                $(".cancel").css("width","10.2%");
+                $(".cancel").css("left","95%");
+                $(".cancel").css("top","-5%");
+                }else{
+                //alert("y bajo");
+                $("#info31").css("transform","rotate(180deg)");
+                    $(".cancel").css("transform","rotate(180deg)");
+                    $(".cancel").css("width","10.2%");
+                $(".cancel").css("left","95%");
+                $(".cancel").css("top","-5%");
+                }
+            }
+            
                  });
        }
      
     function Bcancelar(){
-        $("#cancel").click(function(){
-             $("#informacionC3").hide();
-            $("#cancel").hide();
+        $(".cancel").click(function(){
+             $(".informacionC3").hide();
+            $(".cancel").hide();
         })
     }
     //funcion para obtener coordenadas 

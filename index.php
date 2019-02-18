@@ -19,52 +19,146 @@
     <?php include 'php/consultaBD.php'; ?>
 <meta charset="utf-8">
 </head>
-<body>    
+<body> 
+  <div id="aid" style="display:none;">
+      
+  </div>
+  <div id="dato0" style="display:none;"></div>
+  
 	<div>
 		<div class="row cuadrante">
-			<div class="col-sm-6" style="background-color: blue;">
-				cuadrante 1
-			</div>
-			<div class="col-sm-6" style="background-color: red;">
-				cuadrante 2
-			</div>
-		</div>
-		<div class="row cuadrante">
-			<!--CUADRANTE 3-->
-			<div class="col-sm-6" style="background-color:white;">
+		<!--cuadrante1-->
+			<div class="col-sm-6" id="cuadrante1">
+				
 				<div class="row">
 					<!--INFORMACIÓN CELULAR-->
-					<div class="col-sm-6 seccion" style="background-color: white;">
-						<div id="informacionC3">
-                        <img src="img/cancel.png" id="cancel" alt="">
-						    <h5>Informacion del dispositivo</h5>
+					<div class="col-sm-6 seccion" >
+						<div class="informacionC3" id="info31">
+                        <img   alt="">
+						    <!--<h5>Informacion del dispositivo</h5>
+						    -->
 						    <p id="InfoCel">
 						    </p>
 						</div>
 					</div>
 					<!--COMPARATIVA-->
-					<div class="col-sm-6 compar" style="background-image: url('Imagenes/arrastre.png'); background-size: cover;"  id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<div class="col-sm-6 compar"  style="background-size: cover;"  id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+					 <div class="informacionC3" id="info32">
+                        <img    alt="">
+						    <!--<h5>Informacion del dispositivo</h5>-->
+						    <p id="InfoCel2">
+						    </p>
+						</div>
 					</div>				
 				</div>
 				<div class="row">
 					<!--MENÚ CON ÍCONOS-->
-					<div class="col-sm-6 seccion" style="background-color: white; ">
+					<div class="col-sm-6 seccion" >
                         <?php 
                             $Consulta = new  consultaBD;
-                            $celular = $Consulta->consultaCelular(0);
+                            $celular = $Consulta->consultaCelular(8);
                             $rutaexibido= $celular->rutaImagen;
                         ?>
-						<img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>" class="col-sm-6 cel1" style=" padding:2%; width:60px; height:75%; margin-top:13%;">
-						<button type="button" class="btn btn-primary btnIconos" onclick="getInfo('<?php echo $celular->Camara; ?>');"><i class="fa fa-camera"></i></button>
-						<button type="button" class="btn btn-success btnIconos" onclick="getInfo('<?php echo $celular->Memoria_Ram; ?>');" style="font-size: 25px;"><i class="material-icons">memory</i></button>
-						<button type="button" class="btn btn-warning btnIconos" onclick="getInfo('<?php echo $celular->Descripcion; ?>');"><i class='fas fa-mobile-alt'></i></button>
-						<button type="button" class="btn btn-danger btnIconos" onclick="getInfo('<?php echo $celular->SistemaOperativo; ?>');" style="font-size: 15px;"><i class="fa fa-android"></i>/<i class="fa fa-apple"></i></button>
-						<button type="button" class="btn btn-dark btnIconos" onclick="getInfo('<?php echo $celular->Extras; ?>');"><i class="fa fa-plus"></i></button>
+						<img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>" id="imagen1" >
+						<button id="bcamara" type="button" class="btn btn-primary btnIconos" onclick="getInfo('<?php echo $celular->Camara; ?>');"><i class="fa fa-camera"></i></button>
+						<button id="bram" type="button" class="btn btn-success btnIconos" onclick="getInfo('<?php echo $celular->Memoria_Ram; ?>');" style="font-size: 25px;"><i class="material-icons">memory</i></button>
+						<button id="bdescripcion" type="button" class="btn btn-warning btnIconos" onclick="getInfo('<?php echo $celular->Descripcion; ?>');"><i class='fas fa-mobile-alt'></i></button> <br>
+						<button id="bsistema" type="button" class="btn btn-danger btnIconos" onclick="getInfo('<?php echo $celular->SistemaOperativo; ?>');" style="font-size: 15px;"><i class="fa fa-android"></i>/<i class="fa fa-apple"></i></button>
+						<button id="bextras" type="button" class="btn btn-dark btnIconos" onclick="getInfo('<?php echo $celular->Extras; ?>');"><i class="fa fa-plus"></i></button>
 
 					</div>
 					<!--SLIDER CELULALES-->
-					<div class="col-sm-6" style="background-color: white;">
-						<div id="scrolling" style="background-size: cover;">
+									
+				</div>
+			</div>
+			<!-- cuadrante2-->
+			<div class="col-sm-6" id="cuadrante2">
+				
+				<div class="row">
+					<!--INFORMACIÓN CELULAR-->
+					<div class="col-sm-6 seccion" >
+						<div class="informacionC3" id="info31">
+                        <img   alt="">
+						    <!--<h5>Informacion del dispositivo</h5>
+						    -->
+						    <p id="InfoCel">
+						    </p>
+						</div>
+					</div>
+					<!--COMPARATIVA-->
+					<div class="col-sm-6 compar"  style="background-size: cover;"  id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+					 <div class="informacionC3" id="info32">
+                        <img    alt="">
+						    <!--<h5>Informacion del dispositivo</h5>-->
+						    <p id="InfoCel2">
+						    </p>
+						</div>
+					</div>				
+				</div>
+				<div class="row">
+					<!--MENÚ CON ÍCONOS-->
+					<div class="col-sm-6 seccion" >
+                        <?php 
+                            $Consulta = new  consultaBD;
+                            $celular = $Consulta->consultaCelular(8);
+                            $rutaexibido= $celular->rutaImagen;
+                        ?>
+						<img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>" id="imagen1" >
+						<button id="bcamara" type="button" class="btn btn-primary btnIconos" onclick="getInfo('<?php echo $celular->Camara; ?>');"><i class="fa fa-camera"></i></button>
+						<button id="bram" type="button" class="btn btn-success btnIconos" onclick="getInfo('<?php echo $celular->Memoria_Ram; ?>');" style="font-size: 25px;"><i class="material-icons">memory</i></button>
+						<button id="bdescripcion" type="button" class="btn btn-warning btnIconos" onclick="getInfo('<?php echo $celular->Descripcion; ?>');"><i class='fas fa-mobile-alt'></i></button> <br>
+						<button id="bsistema" type="button" class="btn btn-danger btnIconos" onclick="getInfo('<?php echo $celular->SistemaOperativo; ?>');" style="font-size: 15px;"><i class="fa fa-android"></i>/<i class="fa fa-apple"></i></button>
+						<button id="bextras" type="button" class="btn btn-dark btnIconos" onclick="getInfo('<?php echo $celular->Extras; ?>');"><i class="fa fa-plus"></i></button>
+
+					</div>
+					<!--SLIDER CELULALES-->
+								
+				</div>
+			</div>
+		</div>
+		<div class="row cuadrante">
+			<!--CUADRANTE 3-->
+			<div id="cuadrante3" class="col-sm-6">
+				<div class="row">
+					<!--INFORMACIÓN CELULAR-->
+					<div class="col-sm-6 seccion" >
+						<div class="informacionC3" id="info31">
+                        <img   alt="">
+						    <!--<h5>Informacion del dispositivo</h5>
+						    -->
+						    <p id="InfoCel">
+						    </p>
+						</div>
+					</div>
+					<!--COMPARATIVA-->
+					<div class="col-sm-6 compar"  style="background-size: cover;"  id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+					 <div class="informacionC3" id="info32">
+                        <img    alt="">
+						    <!--<h5>Informacion del dispositivo</h5>-->
+						    <p id="InfoCel2">
+						    </p>
+						</div>
+					</div>				
+				</div>
+				<div class="row">
+					<!--MENÚ CON ÍCONOS-->
+					<div class="col-sm-6 seccion" >
+                        <?php 
+                            $Consulta = new  consultaBD;
+                            $celular = $Consulta->consultaCelular(8);
+                            $rutaexibido= $celular->rutaImagen;
+                        ?>
+						<img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>" id="imagen1" >
+						<button id="bcamara" type="button" class="btn btn-primary btnIconos" onclick="getInfo('<?php echo $celular->Camara; ?>');"><i class="fa fa-camera"></i></button>
+						<button id="bram" type="button" class="btn btn-success btnIconos" onclick="getInfo('<?php echo $celular->Memoria_Ram; ?>');" style="font-size: 25px;"><i class="material-icons">memory</i></button>
+						<button id="bdescripcion" type="button" class="btn btn-warning btnIconos" onclick="getInfo('<?php echo $celular->Descripcion; ?>');"><i class='fas fa-mobile-alt'></i></button> <br>
+						<button id="bsistema" type="button" class="btn btn-danger btnIconos" onclick="getInfo('<?php echo $celular->SistemaOperativo; ?>');" style="font-size: 15px;"><i class="fa fa-android"></i>/<i class="fa fa-apple"></i></button>
+						<button id="bextras" type="button" class="btn btn-dark btnIconos" onclick="getInfo('<?php echo $celular->Extras; ?>');"><i class="fa fa-plus"></i></button>
+
+					</div>
+					<!--SLIDER CELULALES-->
+					<div class="col-sm-6" >
+						<div id="scrolling" >
 							<ul>
                             <?php
                                     $Consulta = new  consultaBD;
@@ -83,8 +177,49 @@
 					</div>				
 				</div>
 			</div>
-			<div class="col-sm-6" style="background-color: green;">
-				cuadrante 4
+			<!--CUADRANTE 4-->
+			<div class="col-sm-6" id="cuadrante4">
+				
+				<div class="row">
+					<!--INFORMACIÓN CELULAR-->
+					<div class="col-sm-6 seccion" >
+						<div class="informacionC3" id="info31">
+                        <img   alt="">
+						    <!--<h5>Informacion del dispositivo</h5>
+						    -->
+						    <p id="InfoCel">
+						    </p>
+						</div>
+					</div>
+					<!--COMPARATIVA-->
+					<div class="col-sm-6 compar"  style="background-size: cover;"  id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+					 <div class="informacionC3" id="info32">
+                        <img    alt="">
+						    <!--<h5>Informacion del dispositivo</h5>-->
+						    <p id="InfoCel2">
+						    </p>
+						</div>
+					</div>				
+				</div>
+				<div class="row">
+					<!--MENÚ CON ÍCONOS-->
+					<div class="col-sm-6 seccion" >
+                        <?php 
+                            $Consulta = new  consultaBD;
+                            $celular = $Consulta->consultaCelular(8);
+                            $rutaexibido= $celular->rutaImagen;
+                        ?>
+						<img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>" id="imagen1" >
+						<button id="bcamara" type="button" class="btn btn-primary btnIconos" onclick="getInfo('<?php echo $celular->Camara; ?>');"><i class="fa fa-camera"></i></button>
+						<button id="bram" type="button" class="btn btn-success btnIconos" onclick="getInfo('<?php echo $celular->Memoria_Ram; ?>');" style="font-size: 25px;"><i class="material-icons">memory</i></button>
+						<button id="bdescripcion" type="button" class="btn btn-warning btnIconos" onclick="getInfo('<?php echo $celular->Descripcion; ?>');"><i class='fas fa-mobile-alt'></i></button> <br>
+						<button id="bsistema" type="button" class="btn btn-danger btnIconos" onclick="getInfo('<?php echo $celular->SistemaOperativo; ?>');" style="font-size: 15px;"><i class="fa fa-android"></i>/<i class="fa fa-apple"></i></button>
+						<button id="bextras" type="button" class="btn btn-dark btnIconos" onclick="getInfo('<?php echo $celular->Extras; ?>');"><i class="fa fa-plus"></i></button>
+
+					</div>
+					<!--SLIDER CELULALES-->
+									
+				</div>
 			</div>
 		</div>
 	</div>
@@ -140,6 +275,7 @@
     </div>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script src="js/funciones.js"></script>
+<script src="funciones2.js"></script>
 <script type="text/javascript" src="js/DragandDrop.js"></script>
 </body>
 </html>

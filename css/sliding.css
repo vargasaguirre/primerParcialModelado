@@ -2,11 +2,13 @@
 #scrolling{/*frame*/
     position:fixed;
     /*top:58%;*/
-    background:#5858FA;/*FF473D*/
-    height:25%;
+    background:rgba(0, 0, 0, 0);
+    height:23%;
     width:18%;
+    left: 29%;
     overflow: hidden;
 }
+
 
 ul {
     /*Add if you want to disable the option of selecting the text while sliding*/
@@ -23,7 +25,6 @@ ul {
     height:70%;
 
     list-style-type: none;
-
     -webkit-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -44,7 +45,10 @@ li {
     -o-border-radius: 30px;
     -moz-border-radius: 30px;
     cursor: pointer;
-    background: #FFF;
+     border-color: rgba(255, 255, 255, 0.87);
+    border-width: 2px;
+    border-style: solid;
+    background: rgba(3, 97, 247, 0.12);
     -webkit-transform:  scale(0.95);
     -ms-transform:  scale(0.95);
     -moz-transform:  scale(0.95);
