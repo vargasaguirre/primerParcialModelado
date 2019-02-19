@@ -55,8 +55,13 @@
 					<div class="col-sm-6 seccion" style="background-color: white; ">
                         <?php 
                             $Consulta = new  consultaBD;
-                            $celular = $Consulta->consultaCelular(8);
-                            $rutaexibido= $celular->rutaImagen;
+                            $celular = $Consulta->consultaCelular(1);
+                            if(isset($celular->rutaImagen)){
+                            	$rutaexibido= $celular->rutaImagen;
+                            }
+                            else {
+                            	$rutaexibido = "";
+                            }
                         ?>
 						<img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>" class="col-sm-6 cel1" style=" padding:2%; width:60px; height:75%; margin-top:13%;">
 						<button type="button" class="btn btn-primary btnIconos" onclick="getInfo('<?php echo $celular->Camara; ?>',1);"><i class="fa fa-camera"></i></button>
