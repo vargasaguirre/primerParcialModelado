@@ -9,8 +9,8 @@
 .contenedorBotones{
    
     margin: 0;
-    left:50%;
-    top: -100%
+    left:65%;
+    top: -80%
 }
 
 .btnIconos{
@@ -41,7 +41,7 @@ h5{
     border-color: rgba(1, 1, 8, 0.63);
     border-style: solid;
     margin: 0 auto;
-    margin-top: 1%;
+    margin-top: 9%;
    width: 90%;
     height: 97%;
 	 font-size: 1vw;
@@ -49,7 +49,7 @@ h5{
      text-align: center;
      text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75);
     border-radius: 5%;
-    margin-top: 5px;
+    
      /*color: white;
      text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;*/
 }
@@ -173,6 +173,7 @@ h5{
     transform: rotate(180deg);
     text-align: center;
     margin-top: 2%;
+    left: 200%;
 }
 .textoes.dos{
     color:white;
@@ -198,9 +199,9 @@ h5{
     margin-right: px;
 }
 .celularExibicion{
-    margin-top: 20%;
+    margin-top: 26%;
     width: 100%;
-    height: 80%;
+    height: 90%;
     
 }
 
@@ -256,13 +257,6 @@ canvas{
 
 .js-count-particles{
   font-size: 1.1em;
-}
-
-p{
-    text-align: center;
-    color: white;
-    margin: 5%;
-    position: fixed;
 }
 
 #stats,

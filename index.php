@@ -26,7 +26,7 @@
 
 </head>
 <body>    
-<p >hola</p>
+
 <!-- particles.js container -->
 <div id="particles-js">
     

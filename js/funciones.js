@@ -188,7 +188,7 @@ $(document).ready(function(){
         $("#salvapantallas").hide();
 
        
-  lap=setTimeout("$('#salvapantallas').show();", 60000);  /*cuando ya no se mueve el mouse despues de el tiempo ,de ejecuta esta linea,els segunto parametro el el tiempo 1s=1000*/
+  lap=setTimeout("$('#salvapantallas').show();", 5000);  /*cuando ya no se mueve el mouse despues de el tiempo ,de ejecuta esta linea,els segunto parametro el el tiempo 1s=1000*/
         
     }
     
