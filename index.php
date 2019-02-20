@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <?php include 'php/consultaBD.php'; ?>
+    <?php include 'php/consultaBD.php'; 
+  		$Consulta = new  consultaBD;
+    ?>
 <meta charset="utf-8">
 </head>
 <body>    
@@ -47,9 +49,15 @@
 					<!--MENÚ CON ÍCONOS-->
 					<div class="col-sm-6 seccion" >
                         <?php 
-                            $Consulta = new  consultaBD;
-                            $celular = $Consulta->consultaCelular(8);
+                      		$celular = $Consulta->consultaCelular(1);
+                        if (isset($celular->rutaImagen)) {
+                        	
                             $rutaexibido= $celular->rutaImagen;
+                        }else {
+                        	$rutaexibido= "";
+                        }
+                            
+                            
                         ?>
                         <div  class="col-sm-6 seccion">
                             <img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>"  class="celularExibicion CelEx1">
@@ -106,9 +114,14 @@
 					<!--MENÚ CON ÍCONOS-->
 					<div class="col-sm-6 seccion" >
                         <?php 
-                            $Consulta = new  consultaBD;
-                            $celular = $Consulta->consultaCelular(8);
+                        $celular = $Consulta->consultaCelular(2);
+                            if (isset($celular->rutaImagen)) {
+                        	
                             $rutaexibido= $celular->rutaImagen;
+                        }else {
+                        	$rutaexibido= "";
+                        }
+                            
                         ?>
                         <div id="imagencelular3" class="col-sm-6 seccion">
                             <img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>"  class="celularExibicion CelEx2">
@@ -167,9 +180,14 @@
 					<!--MENÚ CON ÍCONOS-->
 					<div class="col-sm-6 seccion">
                         <?php 
-                            $Consulta = new  consultaBD;
-                            $celular = $Consulta->consultaCelular(8);
+                        $celular = $Consulta->consultaCelular(3);
+                            if (isset($celular->rutaImagen)) {
+                        	
                             $rutaexibido= $celular->rutaImagen;
+                        }else {
+                        	$rutaexibido= "";
+                        }
+                            
                         ?>
                         <div id="imagencelular3" class="col-sm-6 seccion">
                             <img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>"  class="celularExibicion CelEx3">
@@ -230,9 +248,14 @@
 					<!--MENÚ CON ÍCONOS-->
 					<div class="col-sm-6 seccion">
                         <?php 
-                            $Consulta = new  consultaBD;
-                            $celular = $Consulta->consultaCelular(8);
+                        $celular = $Consulta->consultaCelular(4);
+                           if (isset($celular->rutaImagen)) {
+                        	
                             $rutaexibido= $celular->rutaImagen;
+                        }else {
+                        	$rutaexibido= " ";
+                        }
+                            
                         ?>
                         <div id="" class="col-sm-6 seccion">
                             <img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>"  class="celularExibicion CelEx1">
