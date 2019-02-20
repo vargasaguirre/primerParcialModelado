@@ -6,10 +6,12 @@
 }
 
 .btnIconos{
+    margin-top: 9%;
+    margin-left: 1%;
     font-size: 23px;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 30%;
+    height: 30%;
     box-shadow: 3px 3px 2px grey;
     -webkit-transition: width 0.5s, height 0.5s; /* For Safari 3.1 to 6.0 */
     transition: width 0.5s, height 0.5s;
@@ -19,21 +21,21 @@
     width: 60px;
     height: 60px;
 }
-
 .informacionC3{
-  transform: ;
+    color: white;
     -webkit-user-select: none;
-    background-color: rgba(216, 205, 221, 0.93);
-    border-color: rgba(175, 19, 19, 0.68);
+    background-color: rgba(7, 144, 245, 0.29);
+    border-color: rgba(1, 1, 8, 0.63);
     border-style: solid;
     margin: 0 auto;
     margin-top: 1%;
    width: 90%;
     height: 97%;
-	 font-size: 3vw;
+	 font-size: 1vw;
      font-family: verdana;
      text-align: center;
      text-shadow: 2px 2px 1px grey;
+    border-radius: 10%;
      /*color: white;
      text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;*/
 }
@@ -44,6 +46,7 @@
      text-align: center;
      text-shadow: 1px 1px 1px grey;
 }
+
 #cancel{
     width: 8%;
     position:absolute;
@@ -155,4 +158,36 @@ html,body{
     color:white;
     text-align: center;
   margin-top: 35%;
+}
+#cuadrante1{
+    transform: rotate(180deg);
+        background-color: rgba(0, 0, 0, 0.93);
+}
+#cuadrante2{
+    transform: rotate(180deg);
+        background-color: rgba(0, 0, 0, 0.93);
+}
+#cuadrante3{
+        background-color: rgba(0, 0, 0, 0.93);
+}
+#cuadrante4{
+    
+        background-color: rgba(0, 0, 0, 0.93);
+}
+#slidercuadrante1{
+    margin-right: px;
+}
+.celularExibicion{
+    margin-top: 20%;
+    width: 100%;
+    height: 80%;
+    
+}
+
+.imagencelular3{
+   
+    position: absolute;
+}
+#contenedor{
+    margin-left: 50%;
 }

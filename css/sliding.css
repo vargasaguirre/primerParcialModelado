@@ -1,11 +1,11 @@
 /* Add to docs */
 #scrolling{/*frame*/
-    position:fixed;
+    position:absolute;
     /*top:58%;*/
     background:rgba(0, 0, 0, 0);
-    height:23%;
-    width:18%;
-    left: 29%;
+    height:99%;
+    width:60%;
+    left: 20%;
     overflow: hidden;
 }
 
