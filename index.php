@@ -168,13 +168,8 @@
 					<div class="col-sm-6 seccion">
                         <?php 
                             $Consulta = new  consultaBD;
-                            $celular = $Consulta->consultaCelular(1);
-                            if(isset($celular->rutaImagen)){
-                            	$rutaexibido= $celular->rutaImagen;
-                            }
-                            else {
-                            	$rutaexibido = "";
-                            }
+                            $celular = $Consulta->consultaCelular(8);
+                            $rutaexibido= $celular->rutaImagen;
                         ?>
                         <div id="imagencelular3" class="col-sm-6 seccion">
                             <img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>"  class="celularExibicion CelEx3">
