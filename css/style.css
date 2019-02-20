@@ -1,30 +1,43 @@
 .cuadrante {
-	height: 20em;
+	height: 50vh;
+    width: 101%;
+    
 }
 .seccion {
 	height: 10em;
 }
+.contenedorBotones{
+   
+    margin: 0;
+    left:50%;
+    top: -100%
+}
 
 .btnIconos{
-    margin-top: 9%;
-    margin-left: 1%;
-    font-size: 23px;
+    margin-top: 4%;
+    margin-left: 3%;
+    font-size: 20px;
     border-radius: 50%;
-    width: 30%;
-    height: 30%;
+    width: 3vw;
+    height: 3vw;
     box-shadow: 3px 3px 2px grey;
     -webkit-transition: width 0.5s, height 0.5s; /* For Safari 3.1 to 6.0 */
     transition: width 0.5s, height 0.5s;
 }
 .btnIconos:hover {
     font-size: 28px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+}
+h5{
+    color: rgb(255, 255, 255);
+   font-family:;
+    
 }
 .informacionC3{
-    color: white;
+    color: rgba(255, 255, 255, 0.73);
     -webkit-user-select: none;
-    background-color: rgba(7, 144, 245, 0.29);
+    background-color: rgba(31, 57, 67, 0.83);
     border-color: rgba(1, 1, 8, 0.63);
     border-style: solid;
     margin: 0 auto;
@@ -32,13 +45,23 @@
    width: 90%;
     height: 97%;
 	 font-size: 1vw;
-     font-family: verdana;
+     font-family:;
      text-align: center;
-     text-shadow: 2px 2px 1px grey;
-    border-radius: 10%;
+     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75);
+    border-radius: 5%;
+    margin-top: 5px;
      /*color: white;
      text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;*/
 }
+.C1infocuadrante1{}
+.C2infocuadrante1{}
+.C1infocuadrante2{}
+.C2infocuadrante2{}
+.C1infocuadrante3{}
+.C2infocuadrante3{}
+.C1infocuadrante4{}
+.C2infocuadrante4{}
+
 #div1{
     padding: auto;
      font-size: 1vw;
@@ -55,13 +78,7 @@
     transform: ;
 }
 
-html,body{
-    
-    color: black;
-    height: 98.8%;
-    width: 100%;
-    margin: 0px;
-}
+
 
 @-webkit-keyframes scroll {
   0% {
@@ -130,6 +147,9 @@ html,body{
     width: 35vw;
     height: 23vw;
 }
+.imagenes.img2{
+    transform: rotate(180deg);
+}
 #salva{
     background-color: red;
     
@@ -161,18 +181,18 @@ html,body{
 }
 #cuadrante1{
     transform: rotate(180deg);
-        background-color: rgba(0, 0, 0, 0.93);
+       /* background-color: rgba(0, 0, 0, 0.93);*/
 }
 #cuadrante2{
     transform: rotate(180deg);
-        background-color: rgba(0, 0, 0, 0.93);
+       /* background-color: rgba(0, 0, 0, 0.93);*/
 }
 #cuadrante3{
-        background-color: rgba(0, 0, 0, 0.93);
+        /*background-color: rgba(0, 0, 0, 0.93);*/
 }
 #cuadrante4{
     
-        background-color: rgba(0, 0, 0, 0.93);
+        /*background-color: rgba(0, 0, 0, 0.93);*/
 }
 #slidercuadrante1{
     margin-right: px;
@@ -188,6 +208,90 @@ html,body{
    
     position: absolute;
 }
-#contenedor{
-    margin-left: 50%;
+
+
+
+
+
+
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+
+
+
+canvas{
+  display:block;
+  vertical-align:bottom;
 }
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+p{
+    text-align: center;
+    color: white;
+    margin: 5%;
+    position: fixed;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+    position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000914;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+

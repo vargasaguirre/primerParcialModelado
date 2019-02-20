@@ -1,11 +1,25 @@
-function getInfo(info,infocompar) {
-  document.getElementById("InfoCel").innerHTML = info;
-  var peka = document.getElementById("InfoCelCompar").getAttribute("class");
-  var response = consultaBD(peka,infocompar);
+function getInfo(info,infocompar,cuadrante) {
+    //alert(cuadrante);
+    if(cuadrante==1){
+        document.getElementById("InfoCelc1").innerHTML = info;
+        var peka = document.getElementById("InfoCelComparc"+cuadrante).getAttribute("class");
+    }else if(cuadrante==2){
+        document.getElementById("InfoCelc2").innerHTML = info;
+        var peka = document.getElementById("InfoCelComparc"+cuadrante).getAttribute("class");
+    }else if(cuadrante==3){
+        document.getElementById("InfoCelc3").innerHTML = info;
+        var peka = document.getElementById("InfoCelComparc"+cuadrante).getAttribute("class");
+    }else if(cuadrante==4){
+        document.getElementById("InfoCelc4").innerHTML = info;
+        var peka = document.getElementById("InfoCelComparc"+cuadrante).getAttribute("class");
+    }
+ 
+  
+  var response = consultaBD(peka,infocompar,cuadrante);
   
   //document.getElementById("InfoCelCompar").innerHTML=infocompar;
 }
-function consultaBD(dato,indice) {
+function consultaBD(dato,indice,cuadran) {
     $.ajax({
         type: 'POST',
         url:  'php/consultaBD.php',
@@ -16,15 +30,15 @@ function consultaBD(dato,indice) {
           document.getElementById('div1').style.backgroundImage = "url('Imagenes/iphonecarac2.jpg')";
              var oj= JSON.parse(data);
              if (indice==1) {
-                 document.getElementById("InfoCelCompar").innerHTML = oj.Camara;
+                 document.getElementById("InfoCelComparc"+cuadran).innerHTML = oj.Camara;
              }else if (indice==2) {
-                document.getElementById("InfoCelCompar").innerHTML = oj.Memoria_Ram;
+                document.getElementById("InfoCelComparc"+cuadran).innerHTML = oj.Memoria_Ram;
              }else if (indice==3) {
-                document.getElementById("InfoCelCompar").innerHTML = oj.Descripcion;
+                document.getElementById("InfoCelComparc"+cuadran).innerHTML = oj.Descripcion;
              }else if (indice==4){
-                document.getElementById("InfoCelCompar").innerHTML = oj.SistemaOperativo;
+                document.getElementById("InfoCelComparc"+cuadran).innerHTML = oj.SistemaOperativo;
              }else if (indice==5){
-                document.getElementById("InfoCelCompar").innerHTML = oj.Extras;
+                document.getElementById("InfoCelComparc"+cuadran).innerHTML = oj.Extras;
              }
             
         },
@@ -45,31 +59,111 @@ $(document).ready(function(){
 
     
     function rotarInfo(){
-        var xfinal,yfinal,xinicial,yinicial;
+        var xfinal=0,yfinal=0,xinicial=0,yinicial=0;
         $(".informacionC3").mousedown(function(event){
             xinicial = event.pageX;
             yinicial = event.pageY;
+           // alert(xinicial+"---"+yinicial);
     });
         
         $(".informacionC3").mouseup(function(event){
             xfinal=event.pageX;
             yfinal=event.pageY;
             
-            if(yinicial<yfinal){
-                //alert("y subio");
-                $(".informacionC3").css("transform","rotate(0deg)");
-                $("#cancel").css("width","10.2%");
-                $("#cancel").css("left","95%");
-                $("#cancel").css("top","-5%");
+                 });
+        $(".C1infocuadrante1").mouseup(function(event){
+             if(yinicial<=yfinal){
+               // alert("y subio");
+                $(".C1infocuadrante1").css("transform","rotate(180deg)");
+                
                 }else{
                 //alert("y bajo");
-                $(".informacionC3").css("transform","rotate(180deg)");
-                    $("#cancel").css("transform","rotate(180deg)");
-                    $("#cancel").css("width","10.2%");
-                $("#cancel").css("left","95%");
-                $("#cancel").css("top","-5%");
+                     $(".C1infocuadrante1").css("transform","rotate(0deg)");
+                
+
                 }
-                 });
+            });
+         $(".C2infocuadrante1").mouseup(function(event){
+             if(yinicial<=yfinal){
+               // alert("y subio");
+                $(".C2infocuadrante1").css("transform","rotate(180deg)");
+                
+                }else{
+                //alert("y bajo");
+                $(".C2infocuadrante1").css("transform","rotate(0deg)");
+
+                }
+            });
+        
+        $(".C1infocuadrante2").mouseup(function(event){
+             if(yinicial<=yfinal){
+               // alert("y subio");
+                $(".C1infocuadrante2").css("transform","rotate(180deg)");
+                
+                }else{
+                //alert("y bajo");
+                $(".C1infocuadrante2").css("transform","rotate(0deg)");
+
+                }
+            });
+         $(".C2infocuadrante2").mouseup(function(event){
+             if(yinicial<=yfinal){
+               // alert("y subio");
+                $(".C2infocuadrante2").css("transform","rotate(180deg)");
+                
+                }else{
+                //alert("y bajo");
+                $(".C2infocuadrante2").css("transform","rotate(0deg)");
+
+                }
+            });
+        
+        $(".C1infocuadrante3").mouseup(function(event){
+             if(yinicial<=yfinal){
+               // alert("y subio");
+                $(".C1infocuadrante3").css("transform","rotate(0deg)");
+                
+                }else{
+                //alert("y bajo");
+                $(".C1infocuadrante3").css("transform","rotate(180deg)");
+
+                }
+            });
+         $(".C2infocuadrante3").mouseup(function(event){
+             if(yinicial<=yfinal){
+               // alert("y subio");
+                $(".C2infocuadrante3").css("transform","rotate(0deg)");
+                
+                }else{
+                //alert("y bajo");
+                $(".C2infocuadrante3").css("transform","rotate(180deg)");
+
+                }
+            });
+        
+        
+        $(".C1infocuadrante4").mouseup(function(event){
+             if(yinicial<=yfinal){
+               // alert("y subio");
+                $(".C1infocuadrante4").css("transform","rotate(0deg)");
+                
+                }else{
+                //alert("y bajo");
+                $(".C1infocuadrante4").css("transform","rotate(180deg)");
+
+                }
+            });
+         $(".C2infocuadrante4").mouseup(function(event){
+             if(yinicial<=yfinal){
+               // alert("y subio");
+                $(".C2infocuadrante4").css("transform","rotate(0deg)");
+                
+                }else{
+                //alert("y bajo");
+                $(".C2infocuadrante4").css("transform","rotate(180deg)");
+
+                }
+            });
        }
      
     function Bcancelar(){

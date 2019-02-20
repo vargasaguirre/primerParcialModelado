@@ -1,15 +1,13 @@
 /* Add to docs */
 #scrolling{/*frame*/
     position:absolute;
-    /*top:58%;*/
+    top:18%;
     background:rgba(0, 0, 0, 0);
     height:99%;
     width:60%;
     left: 20%;
     overflow: hidden;
 }
-
-
 ul {
     /*Add if you want to disable the option of selecting the text while sliding*/
     -webkit-user-select: none;

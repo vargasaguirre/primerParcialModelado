@@ -30,7 +30,10 @@ function allowDrop(ev)  {
           document.getElementById('div1').style.backgroundImage = "url('Imagenes/iphonecarac2.jpg')";
              var oj= JSON.parse(data);
                 //alert(oj.idCelular);
-               document.getElementById("InfoCelCompar").setAttribute("class",oj.idCelular);
+               document.getElementById("InfoCelComparc1").setAttribute("class",oj.idCelular);
+            document.getElementById("InfoCelComparc2").setAttribute("class",oj.idCelular);
+            document.getElementById("InfoCelComparc3").setAttribute("class",oj.idCelular);
+            document.getElementById("InfoCelComparc4").setAttribute("class",oj.idCelular);
         },
         error: function() {
           $("#div1").html("Error");
