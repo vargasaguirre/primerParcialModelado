@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <?php include 'php/consultaBD.php'; ?>
+    <?php include 'php/consultaBD.php'; 
+    ?>
     
 <meta charset="utf-8">
  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
@@ -58,8 +59,13 @@
 					<div class="col-sm-6 seccion" >
                         <?php 
                             $Consulta = new  consultaBD;
-                            $celular = $Consulta->consultaCelular(8);
-                            $rutaexibido= $celular->rutaImagen;
+                            $celular = $Consulta->consultaCelular(1);
+                            if (isset($celular->rutaImagen)) {
+                            	$rutaexibido= $celular->rutaImagen;
+                            }
+                            else {
+                            	$rutaexibido = "";
+                            }
                         ?>
                         <div  class="col-sm-6 seccion">
                             <img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>"  class="celularExibicion CelEx1">
@@ -76,10 +82,9 @@
 					</div>
 					<!--SLIDER CELULALES-->
 					<div class="col-sm-6" >
-						<div id="scrolling" style="background-size: cover;">
+						<div id="scrolling1" class="scrollingstyle" style="background-size: cover;">
 							<ul>
                             <?php
-                                    $Consulta = new  consultaBD;
                                     $usuarios = $Consulta->consultaCelulares();
                                     $N_U = count($usuarios,0);
                                  for ($i=0; $i<$N_U;$i++){
@@ -119,9 +124,13 @@
 					<!--MENÚ CON ÍCONOS-->
 					<div class="col-sm-6 seccion" >
                         <?php 
-                            $Consulta = new  consultaBD;
-                            $celular = $Consulta->consultaCelular(8);
-                            $rutaexibido= $celular->rutaImagen;
+                            $celular = $Consulta->consultaCelular(2);
+                           if (isset($celular->rutaImagen)) {
+                            	$rutaexibido= $celular->rutaImagen;
+                            }
+                            else {
+                            	$rutaexibido = "";
+                            }
                         ?>
                         <div id="imagencelular3" class="col-sm-6 seccion">
                             <img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>"  class="celularExibicion CelEx2">
@@ -138,10 +147,9 @@
 					</div>
 					<!--SLIDER CELULALES-->
 					<div class="col-sm-6"  >
-						<div id="scrolling" style="background-size: cover;">
+						<div id="scrolling2" class="scrollingstyle" style="background-size: cover;">
 							<ul>
                             <?php
-                                    $Consulta = new  consultaBD;
                                     $usuarios = $Consulta->consultaCelulares();
                                     $N_U = count($usuarios,0);
                                  for ($i=0; $i<$N_U;$i++){
@@ -183,9 +191,13 @@
 					<!--MENÚ CON ÍCONOS-->
 					<div class="col-sm-6 seccion">
                         <?php 
-                            $Consulta = new  consultaBD;
-                            $celular = $Consulta->consultaCelular(8);
-                            $rutaexibido= $celular->rutaImagen;
+                            $celular = $Consulta->consultaCelular(3);
+                            if (isset($celular->rutaImagen)) {
+                            	$rutaexibido= $celular->rutaImagen;
+                            }
+                            else {
+                            	$rutaexibido = "";
+                            }
                         ?>
                         <div id="imagencelular3" class="col-sm-6 seccion">
                             <img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>"  class="celularExibicion CelEx3">
@@ -203,7 +215,7 @@
 					</div>
 					<!--SLIDER CELULALES-->
 					<div class="col-sm-6"  >
-						<div id="scrolling" style="background-size: cover;">
+						<div id="scrolling3" class="scrollingstyle" style="background-size: cover;">
 							<ul>
                             <?php
                                     $Consulta = new  consultaBD;
@@ -246,9 +258,13 @@
 					<!--MENÚ CON ÍCONOS-->
 					<div class="col-sm-6 seccion">
                         <?php 
-                            $Consulta = new  consultaBD;
-                            $celular = $Consulta->consultaCelular(8);
-                            $rutaexibido= $celular->rutaImagen;
+                            $celular = $Consulta->consultaCelular(4);
+                            if (isset($celular->rutaImagen)) {
+                            	$rutaexibido= $celular->rutaImagen;
+                            }
+                            else {
+                            	$rutaexibido = "";
+                            }
                         ?>
                         <div id="" class="col-sm-6 seccion">
                             <img src="<?php echo 'BDCelulares/'.$rutaexibido; ?>"  class="celularExibicion CelEx1">
@@ -265,7 +281,7 @@
 					</div>
 					<!--SLIDER CELULALES-->
 					<div class="col-sm-6"  >
-						<div id="scrolling" style="background-size: cover;">
+						<div id="scrolling4" class="scrollingstyle" style="background-size: cover;">
 							<ul>
                             <?php
                                     $Consulta = new  consultaBD;

@@ -1,5 +1,5 @@
 /* Add to docs */
-#scrolling{/*frame*/
+.scrollingstyle{/*frame*/
     position:absolute;
     top:17%;
     background:rgba(0, 0, 0, 0);

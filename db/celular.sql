@@ -48,13 +48,13 @@ CREATE TABLE `celular` (
 
 INSERT INTO `celular` (`idCelular`, `Marca`, `Modelo`, `Precio`, `Descripcion`, `Camara`, `Memoria_Ram`, `Almacenamiento`, `SistemaOperativo`, `Extras`, `rutaImagen`) VALUES
 (0, 'Motorola', 'Moto E4', 2500, 'Pantalla de 5 Pulgadas, Color Negro', '8 Mpx', '2GB', 316, 'Android', 'Lector de huellas,Audifonos', 'motoroloa.jpg'),
-(1, 'Apple', 'iphone8(T4)', 17000, 'Color oro,plata,gris especial', '12 MP', '256 GB', 64, 'iOS', 'Chip A11 Bionic\r\nsensor de huellas digitales ', 'iphone.jpg'),
-(2, 'Huawei', 'Huawei Y7', 40000, 'Pantalla 5,99 pulgadas\r\nProcesador octa-core 1.4 GHZ', '13 MP', '2 GB', 16, 'Android', 'Lector de huellas\r\ncamara frontal 8 MP', 'huawei.jpg'),
-(3, 'LG', 'LG G7', 3500, 'Pantalla IPS 6 pulgadas\r\nProcesador Snapdragon 845\r\n', '8 MP', '4 GB', 64, 'Android', 'Sensor de huellas\r\nSonido Boombox\r\n', 'lg.jpg'),
+(1, 'Apple', 'iphone8(T4)', 17000, 'Color oro,plata,gris especial', '12 MP', '256 GB', 64, 'iOS', 'Chip A11 Bionic, sensor de huellas digitales ', 'iphone.jpg'),
+(2, 'Huawei', 'Huawei Y7', 40000, 'Pantalla 5,99 pulgadas, Procesador octa-core 1.4 GHZ', '13 MP', '2 GB', 16, 'Android', 'Lector de huellas, camara frontal 8 MP', 'huawei.jpg'),
+(3, 'LG', 'LG G7', 3500, 'Pantalla IPS 6 pulgadas,Procesador Snapdragon 845', '8 MP', '4 GB', 64, 'Android', 'Sensor de huellas, Sonido Boombox', 'lg.jpg'),
 (4, 'Samsung ', 'Galaxy S9', 11499, 'Pantalla 5.8 pulgadas', '12 MP', '4GB', 64, 'Android Oreo', 'Camara frontal 8MP', 'sam.jpg'),
-(5, 'Huawei', 'Huawei P20', 7000, 'Pantalla 5,84 pulgadas\r\nProcesador Huawei Kirin 970', '20 MPX', '4 GB', 128, 'Android Oreo 8.1', 'Camara frontal 24 MPX', 'And.jpg'),
-(6, 'Motorola', 'One', 6700, 'Pantalla HD 5.86', '12 MPX', '4 GB', 64, 'Android', 'Lector de huellas \r\nAudifonos ', 'motoOne.png'),
-(7, 'Apple', 'iPhone XS', 28000, 'OLED 5,8 pulga', '12+12 MPX', '4GB', 64, 'iOS12', 'Face ID\r\nResistencia al agua\r\n3D Touch\r\n', 'xs.png');
+(5, 'Huawei', 'Huawei P20', 7000, 'Pantalla 5,84 pulgadas, Procesador Huawei Kirin 970', '20 MPX', '4 GB', 128, 'Android Oreo 8.1', 'Camara frontal 24 MPX', 'And.jpg'),
+(6, 'Motorola', 'One', 6700, 'Pantalla HD 5.86', '12 MPX', '4 GB', 64, 'Android', 'Lector de huellas, Audifonos ', 'motoOne.png'),
+(7, 'Apple', 'iPhone XS', 28000, 'OLED 5,8 pulga', '12+12 MPX', '4GB', 64, 'iOS12', 'Face ID, Resistencia al agua, 3D Touch', 'xs.png');
 
 --
 -- Índices para tablas volcadas

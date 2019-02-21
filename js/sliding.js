@@ -2,9 +2,20 @@ var carousel;
 
 $(document).ready(function () {
 
-    carousel = $("#scrolling ul");
-
-    carousel.itemslide({
+    carousel1= $("#scrolling1 ul");
+    carousel1.itemslide({
+        swipe_out: true //NOTE: REMOVE THIS OPTION IF YOU WANT TO DISABLE THE SWIPING SLIDES OUT FEATURE.
+    }); //initialize itemslide
+    carousel2 = $("#scrolling2 ul");
+    carousel2.itemslide({
+        swipe_out: true //NOTE: REMOVE THIS OPTION IF YOU WANT TO DISABLE THE SWIPING SLIDES OUT FEATURE.
+    }); //initialize itemslide
+    carousel3 = $("#scrolling3 ul");
+    carousel3.itemslide({
+        swipe_out: true //NOTE: REMOVE THIS OPTION IF YOU WANT TO DISABLE THE SWIPING SLIDES OUT FEATURE.
+    }); //initialize itemslide
+    carousel4 = $("#scrolling4 ul");
+    carousel4.itemslide({
         swipe_out: true //NOTE: REMOVE THIS OPTION IF YOU WANT TO DISABLE THE SWIPING SLIDES OUT FEATURE.
     }); //initialize itemslide
 
